@@ -3,7 +3,7 @@ import AboutPage from "./pages/about";
 import BlogPage from "./pages/blogs";
 import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
-import ProductPage from "./pages/products";
+import ShopPage from "./pages/products";
 
 const router = new Navigo("/", {linksSelector : "a"});
 const print = (content) => {
@@ -14,7 +14,7 @@ const print = (content) => {
 router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),
-    "/products": () => print(ProductPage),
+    "/shop": () => print(ShopPage),
     "/blog": () => print(BlogPage),
     "/contact": () => print(ContactPage),
 

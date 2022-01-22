@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+.menu_item{
+    @apply  p-4 ;
+} */
+.menu_item_link{
+    @apply block py-3 px-6  hover:text-[#88B44E] font-medium ;
+}
+.buttun:hover{
+    background: linear-gradient(to right,rgba(111,167,0,0.9) 0%,rgba(182,215,0,0.9) 100%);
+}

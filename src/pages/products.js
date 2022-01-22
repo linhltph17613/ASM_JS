@@ -1,8 +1,8 @@
-const ProductPage = {
+const ShopPage = {
     render() {
         return /*html*/ `
         ProductPage nè
         `;
     },
 };
-export default ProductPage;
+export default ShopPage;
