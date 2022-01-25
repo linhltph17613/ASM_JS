@@ -11,3 +11,12 @@
 .buttun:hover{
     background: linear-gradient(to right,rgba(111,167,0,0.9) 0%,rgba(182,215,0,0.9) 100%);
 }
+.overlay{
+    @apply overflow-hidden ;
+}
+.overlay:hover .text-over{
+    @apply visible delay-100;
+}
+.product-item:hover .info-item{
+    @apply opacity-30;
+}
