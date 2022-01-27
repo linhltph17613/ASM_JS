@@ -2,7 +2,49 @@ const Header = {
     render() {
         return /*html*/ `
         <div>
-        
+        <div class="mb-6">
+      <div class="flex bg-[#88B44E] justify-around text-white">
+        <div class="p-2">
+          <i class="bi bi-telephone-fill px-2"></i>0347496758
+        </div>
+        <div class="p-2">
+          <i class="bi bi-envelope px-2"></i>ChaiTanTea@gmail.com
+        </div>
+        <div class="p-2">
+          <i class="bi bi-geo-alt-fill px-2"></i>Trịnh Văn Bô, Nam Từ Liêm, Hà Nội
+        </div>
+      </div>
+      <div class="flex justify-around">
+        <div class="pt-7">
+          <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/logo_03.png" width="250" alt="" srcset="">
+        </div>
+        <div class="mt-10">
+          <ul class="flex">
+            <li class="menu_item"><a class="menu_item_link" href="/">Home</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="/about">About</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="/shop">Shop</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="blog">Blog</a></li>
+            <li class="menu_item"><a class="menu_item_link" href="/contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+        <div class="flex font-medium mt-12 ">
+          <div class="mx-1 ">
+            <i class="bi bi-person-circle"></i> <a class="hover:text-[#88B44E]" href="">Sign In</a> / <a
+              class="hover:text-[#88B44E]" href="">Sign Up</a>
+          </div>
+          <div class="mx-1 hover:text-[#88B44E]">
+            <b><i class="bi bi-search"></i></b>
+          </div>
+          <div class="mx-1 hover:text-[#88B44E]">
+            <b><i class="bi bi-cart3"></i></b>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
         </div>
         `;
     },
