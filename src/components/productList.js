@@ -2,7 +2,7 @@ const ProductList = {
     render() {
         return /*html*/ `
         <!-- Danh sách sản phẩm -->
-    <div class=" text text-center max-w-5xl mx-auto  my-[80px] mt-[80px]">
+    <div class=" text text-center max-w-5xl mx-auto  my-[80px]">
     <p class="font-medium text-[#88B44E] pb-[20px]"> Online store</p>
     <h1 class="font-medium text-4xl">POPULAR PRODUCTS</h1>
     <p class="pt-[20px]"> Integer quis tempor orci. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum
