@@ -98,22 +98,23 @@ const New1 = {
     <button class="buttun bg-black px-[50px] py-3 text-white rounded-full" type="submit">Shop now</button>
   </div>
   <!-- Banner có cốc giấy -->
-  <div class="relative py-[50px] ">
-    <div class="">
-      <img class="pl-[30px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/tea-bg.png?id=5040"
-        alt="">
-    </div>
-    <div class="flex  absolute top-[100px] left-[100px]">
-      <div class="w-2/5 pt-10 ">
-        <h1 class="text-4xl font-medium">Tea sorts presentation
-          and products degustation</h1>
-        <p class="text-2xl pt-[40px]">Integer quis tempor orci. Suspendisse potenti. Interdum et malesuada fames ac
-          ante ipsum primis in faucibus.</p>
-      </div>
+  <div class="relative py-[50px] pb-[300px]">
       <div class="">
-         <img class="pl-[100px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/wooden-cup.jpg" alt="">
+        <img class="pl-[30px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/tea-bg.png?id=5040"
+          alt="">
+          
       </div>
-      
+      <div class="flex  absolute top-[100px] left-[100px]">
+        <div class="w-2/5 pt-10 ">
+          <h1 class="text-4xl font-medium">Tea sorts presentation
+            and products degustation</h1>
+          <p class="text-2xl pt-[40px]">Integer quis tempor orci. Suspendisse potenti. Interdum et malesuada fames ac
+            ante ipsum primis in faucibus.</p>
+        </div>
+        <div class="">
+          <img class="pl-[100px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/wooden-cup.jpg" alt="">
+        </div>
+      </div>
   </div>
         `;
     },

@@ -1,5 +1,5 @@
 
-const BlogList = {
+const Blog = {
     render() {
         return /*html*/ `
         <!-- Danh sách bài blog -->
@@ -57,4 +57,4 @@ const BlogList = {
         `;
     },
 };
-export default BlogList;
+export default Blog;
