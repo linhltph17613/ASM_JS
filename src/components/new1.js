@@ -113,7 +113,7 @@ const New1 = {
       <div class="">
          <img class="pl-[100px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/wooden-cup.jpg" alt="">
       </div>
-      </div>
+      
   </div>
         `;
     },
