@@ -3,6 +3,7 @@ import BlogList from "../components/BlogList";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import New1 from "../components/new1";
+import ProductList from "../components/productList";
 const HomePage = {
     render() {
         return /*html*/ `
