@@ -16,7 +16,7 @@ const Header = {
       </div>
       <div class="flex justify-around">
         <div class="pt-7">
-          <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/logo_03.png" width="250" alt="" srcset="">
+          <img src="https://i.imgur.com/GZSIoZC.png" width="250" alt="" srcset="">
         </div>
         <div class="mt-10">
           <ul class="flex">
