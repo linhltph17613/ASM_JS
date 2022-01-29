@@ -12,7 +12,7 @@ const Banner = {
         </div>
   
         <div class="">
-          <img class="-ml-5" src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/sm_slide_2.png" alt=""
+          <img class="-ml-5" src="https://i.imgur.com/vK1hic7.png" alt=""
             srcset="">
         </div>
       </div>
