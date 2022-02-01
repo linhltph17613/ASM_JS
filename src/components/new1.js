@@ -4,7 +4,7 @@ const New1 = {
         <div class="flex justify-center mt-8">
         <div class="flex bg-[#F5F8F2] px-[80px] py-[30px] items-center rounded-l-full">
           <div class="">
-            <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/05/service-icon-1.png" alt="">
+            <img src="https://i.imgur.com/0Zw3Y90.png" alt="">
           </div>
           <div class="px-4">
             <h2 class="font-medium text-lg">Free delivery</h2>
@@ -13,7 +13,7 @@ const New1 = {
         </div>
         <div class="flex bg-[#252C30] px-[80px] py-[30px] items-center">
           <div class="">
-            <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/05/service-icon-2.png" alt="">
+            <img src="https://i.imgur.com/ni6aqz3.png" alt="">
           </div>
           <div class="px-4">
             <h2 class="text-white font-medium text-lg">Profesional</h2>
@@ -22,7 +22,7 @@ const New1 = {
         </div>
         <div class="flex bg-[#88B44E] px-[80px] py-[30px] items-center rounded-r-full">
           <div class="">
-            <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/05/service-icon-3.png" alt="">
+            <img src="https://i.imgur.com/TTKCrGd.png" alt="">
           </div>
           <div class="px-4">
             <h2 class="text-white font-medium text-lg">Online store</h2>
