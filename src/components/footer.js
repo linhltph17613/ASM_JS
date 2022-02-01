@@ -5,7 +5,7 @@ const Footer = {
 
         <div class="bg-[#252C30] text-white py-[50px] font-medium mt-[50px]">
           <div class="flex  pb-[50px] justify-between max-w-6xl mx-auto">
-            <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/logo_04.png" width="200" alt="" srcset="">
+            <img src="https://i.imgur.com/gqNCjid.png" width="200" alt="" srcset="">
             <div class="flex pt-[30px]">
               <p class="font-medium text-xl">Folow us --</p>
               <div class="pl-5">
@@ -40,14 +40,14 @@ const Footer = {
             <div class="">
               <h3 class="pb-8 text-3xl font-medium text-[#88B44E]">Reccent News</h3>
               <div class="flex">
-                <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/blog_01-110x80.jpg" alt="">
+                <img src="https://i.imgur.com/cUzSs0T.jpg" alt="">
                 <div class="pl-5">
                   <p class="text-[#88B44E]">February 21, 2018</p>
                   <h3 class="font-medium hover:text-[#88B44E] text-xl">3 way how to test nutaral indian tea</h3>
                 </div>
               </div>
               <div class="flex pt-5">
-                <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/blog_02-110x80.jpg" alt="">
+                <img src="https://i.imgur.com/SBxHvZS.jpg" alt="">
                 <div class="pl-5">
                   <p class="text-[#88B44E]">February 26, 2018</p>
                   <h3 class="font-medium hover:text-[#88B44E] text-xl">Result of international tea conference'18</h3>

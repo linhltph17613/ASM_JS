@@ -100,7 +100,7 @@ const New1 = {
   <!-- Banner có cốc giấy -->
   <div class="relative py-[50px] pb-[300px]">
       <div class="">
-        <img class="pl-[30px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/tea-bg.png?id=5040"
+        <img class="pl-[30px] " src="https://i.imgur.com/hfGdkQz.png"
           alt="">
           
       </div>
@@ -112,7 +112,7 @@ const New1 = {
             ante ipsum primis in faucibus.</p>
         </div>
         <div class="">
-          <img class="pl-[100px] " src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/wooden-cup.jpg" alt="">
+          <img class="pl-[100px] " src="https://i.imgur.com/095zAbT.jpg" alt="">
         </div>
       </div>
   </div>

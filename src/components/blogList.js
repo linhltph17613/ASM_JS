@@ -25,7 +25,7 @@ const Blog = {
     </div>
     <div class="border  hover:shadow-lg hover:shadow-gray-500/50 ">
       <div class="overflow-hidden object-cover">
-        <img class="hover:scale-[1.1]" src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/blog_02-1020x633.jpg" alt="">
+        <img class="hover:scale-[1.1]" src="https://i.imgur.com/kY2WbQn.jpg" alt="">
       </div>
       <div class="p-4">
         <p class="text-[#88B44E]">China</p>
@@ -40,7 +40,7 @@ const Blog = {
     </div>
     <div class="border  hover:shadow-lg hover:shadow-gray-500/50 ">
       <div class="overflow-hidden object-cover">
-        <img class="hover:scale-[1.1]" src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/blog_03-1020x633.jpg" alt="">
+        <img class="hover:scale-[1.1]" src="https://i.imgur.com/ydu2lR5.jpg" alt="">
       </div>
       <div class="p-4">
         <p class="text-[#88B44E]">China</p>

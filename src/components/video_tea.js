@@ -4,7 +4,7 @@ const VideoTea = {
            <!-- Video -->
     <div class="my-[100px]">
     <div class="z-0 h-500px">
-      <img class="" src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/SLIDE_02.jpg" alt="">
+      <img class="" src="https://i.imgur.com/cWb5KQZ.jpg" alt="">
     </div>
     <div class=" -mt-[710px]">
       <div class="py-10  text-white text-center">

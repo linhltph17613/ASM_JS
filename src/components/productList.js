@@ -12,7 +12,7 @@ const ProductList = {
     <div class="overlay  ">
       <div class="relative  hover:border product-item p-8 text-center">
         <div class="info-item ">
-          <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/03-340x227.jpg" class="w-full h-full"
+          <img src="https://i.imgur.com/BPHZXpF.jpg" class="w-full h-full"
             alt="">
           <h2 class="text-2xl font-medium">Phoex Dan Cong</h2>
           <p class="py-3">Duis et aliquam orci. Vivamus augue quam, sollicitudin quis bibendum quis, eleifend vitae
@@ -34,7 +34,7 @@ const ProductList = {
     <div class="overlay  ">
       <div class="relative  hover:border product-item p-8 text-center">
         <div class="info-item ">
-          <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/04-340x227.jpg" class="w-full h-full"
+          <img src="https://i.imgur.com/CQFs2Cl.jpg" class="w-full h-full"
             alt="">
           <h2 class="text-2xl font-medium">Bai Hao Olong</h2>
           <p class="py-3">Duis et aliquam orci. Vivamus augue quam, sollicitudin quis bibendum quis, eleifend vitae
@@ -56,7 +56,7 @@ const ProductList = {
     <div class="overlay  ">
       <div class="relative  hover:border product-item p-8 text-center">
         <div class="info-item ">
-          <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/07/02-340x227.jpg" class="w-full h-full"
+          <img src="https://i.imgur.com/acI0ber.jpg" class="w-full h-full"
             alt="">
           <h2 class="text-2xl font-medium">Dong Dinh</h2>
           <p class="py-3">Duis et aliquam orci. Vivamus augue quam, sollicitudin quis bibendum quis, eleifend vitae
