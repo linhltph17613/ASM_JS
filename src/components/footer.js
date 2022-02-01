@@ -3,7 +3,7 @@ const Footer = {
         return /*html*/ `
         <footer>
 
-        <div class="bg-[#1E5128] text-white py-[50px] font-medium mt-[50px]">
+        <div class="bg-[#252C30] text-white py-[50px] font-medium mt-[50px]">
           <div class="flex  pb-[50px] justify-between max-w-6xl mx-auto">
             <img src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/logo_04.png" width="200" alt="" srcset="">
             <div class="flex pt-[30px]">

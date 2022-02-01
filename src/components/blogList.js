@@ -10,7 +10,7 @@ const Blog = {
   <div class="grid grid-cols-3 gap-5 max-w-6xl mx-auto">
     <div class="border  hover:shadow-lg hover:shadow-gray-500/50 ">
       <div class="overflow-hidden object-cover">
-        <img class="hover:scale-[1.1]" src="http://chaitan.like-themes.com/wp-content/uploads/2018/06/blog_01-1020x633.jpg" alt="">
+        <img class="hover:scale-[1.1]" src="https://i.imgur.com/sTZnLhl.jpg" alt="">
       </div>
       <div class="p-4">
         <p class="text-[#88B44E]">China</p>
