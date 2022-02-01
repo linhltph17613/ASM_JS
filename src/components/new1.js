@@ -45,7 +45,7 @@ const New1 = {
           </div>
           <div class="overflow-hidden object-cover">
             <img class="w-full h-full  hover:scale-[1.1]"
-              src="http://leaf.ancorathemes.com/wp-content/uploads/2016/03/img223.jpg" alt="" srcset="">
+              src="https://i.imgur.com/EdVduYG.jpg" alt="" srcset="">
           </div>
         </div>
       </div>
