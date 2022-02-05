@@ -110,6 +110,8 @@ const New1 = {
             and products degustation</h1>
           <p class="text-2xl pt-[40px]">Integer quis tempor orci. Suspendisse potenti. Interdum et malesuada fames ac
             ante ipsum primis in faucibus.</p>
+    <button class="buttun bg-[#88B44E] px-[50px] py-3 font-medium hover:text-black mt-[100px]  text-white rounded-full" type="submit">Read more</button>
+
         </div>
         <div class="">
           <img class="pl-[100px] " src="https://i.imgur.com/095zAbT.jpg" alt="">

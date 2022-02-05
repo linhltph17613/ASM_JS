@@ -34,9 +34,7 @@ const Header = {
             <i class="bi bi-person-circle"></i> <a class="hover:text-[#88B44E]" href="">Sign In</a> / <a
               class="hover:text-[#88B44E]" href="">Sign Up</a>
           </div>
-          <div class="mx-1 hover:text-[#88B44E]">
-            <b><i class="bi bi-search"></i></b>
-          </div>
+         
           <div class="mx-1 hover:text-[#88B44E]">
             <b><i class="bi bi-cart3"></i></b>
           </div>
