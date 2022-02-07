@@ -1,12 +1,12 @@
 const VideoTea = {
-    rendere(){
-        return /*html*/ `
+  rendere() {
+    return /*html*/ `
            <!-- Video -->
     <div class="my-[100px]">
     <div class="z-0 h-500px">
       <img class="" src="https://i.imgur.com/cWb5KQZ.jpg" alt="">
     </div>
-    <div class=" -mt-[710px]">
+    <div class=" -mt-[640px]">
       <div class="py-10  text-white text-center">
         <span class="text-6xl font-medium">How to prepare </span> <span class="text-6xl font-medium text-[#88B44E]">green tea</span>
         <p class="mt-6 text-xl">Wattch our amazing video tutorial:
@@ -21,6 +21,6 @@ const VideoTea = {
     
   </div>
         `;
-    },
+  },
 };
 export default VideoTea;

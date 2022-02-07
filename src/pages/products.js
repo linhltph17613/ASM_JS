@@ -1,8 +1,9 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 const ShopPage = {
-    render() {
-        return /*html*/ `
+  render() {
+    return /*html*/ `
+    
         ${Header.render()}
         <div class="">
         <img class="w-full" src="https://i.imgur.com/06kGrh2.jpg" alt=""
@@ -35,12 +36,24 @@ const ShopPage = {
   <div class="flex gap-5 max-w-6xl mx-auto mb-9">
     <div class="bg-gray-100 px-[50px] py-9 w-1/3">
       <div class="py-3">
+        <div class="flex py-5">
+            <div class="mt-4 mr-2">
+              <img src="https://i.imgur.com/nC7J0xR.png" alt="">
+
+            </div>
+            <h3 class="font-medium text-3xl hover:text-[#88B44E]">Search</h3>
+          </div>
         <form action="">
       <input class="border rounded-full w-[250px] px-2 py-2" type="text" placeholder="Search.."> <i class="bi bi-search-heart"></i>
     </form>
     </div>
-    <h3 class="font-medium text-3xl py-5">Categories</h3>
-      <div class="">
+    <div class="flex mt-[50px] py-5">
+            <div class="mt-4 mr-2">
+              <img src="https://i.imgur.com/nC7J0xR.png" alt="">
+
+            </div>
+            <h3 class="font-medium text-3xl hover:text-[#88B44E]">Categories</h3>
+          </div>      <div class="">
         <nav>
           <ul class="list-disc pl-5">
             <li class=" hover:text-[#88B44E]"><a href="">Black Tea</a></li>
@@ -50,14 +63,25 @@ const ShopPage = {
           </ul>
         </nav>  
       </div>
-    <h3 class="font-medium text-3xl py-5">Filter</h3>
+    <div class="flex mt-[50px] py-5">
+            <div class="mt-4 mr-2">
+              <img src="https://i.imgur.com/nC7J0xR.png" alt="">
+
+            </div>
+            <h3 class="font-medium text-3xl hover:text-[#88B44E]">Categories</h3>
+          </div>
       <div class="">
         <input type="range" class="w-[250px] bg-[#88B44E] mb-4" name="" value="">
         <h3 class="font-medium text-center">Price: $1-$4</h3>
         <button class="buttun ml-[80px] mt-5 text-white font-medium px-9 py-2 rounded-full bg-[#88B44E]">Filter</button>
       </div>
-    <h3 class="font-medium text-3xl py-5">Product tags</h3>
-      <div class="py-5">
+     <div class="flex  mt-[50px] py-5">
+            <div class="mt-4 mr-2">
+              <img src="https://i.imgur.com/nC7J0xR.png" alt="">
+
+            </div>
+            <h3 class="font-medium text-3xl hover:text-[#88B44E]">Product tags</h3>
+          </div>      <div class="py-5">
         <span class="text-[#88B44E]">#</span>black &ensp;<span class="text-[#88B44E]">#</span>green 
         &ensp;<span class="text-[#88B44E]">#</span>organic 
         &ensp;<span class="text-[#88B44E]">#</span>tea
@@ -156,8 +180,8 @@ const ShopPage = {
           <div>
           </div>
       </div>
-  ${Footer.render()}
+      ${Footer.render()}
         `;
-    },
+  },
 };
 export default ShopPage;
