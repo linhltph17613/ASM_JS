@@ -1,6 +1,6 @@
 const Header = {
-    render() {
-        return /*html*/ `
+  render() {
+    return /*html*/ `
         <div>
         <div class="mb-6">
       <div class="flex bg-[#88B44E] justify-around text-white">
@@ -31,7 +31,8 @@ const Header = {
         </div>
         <div class="flex font-medium mt-12 ">
           <div class="mx-1 ">
-            <i class="bi bi-person-circle"></i> <a class="hover:text-[#88B44E]" href="">Sign In</a> / <a
+            <a class="hover:text-[#88B44E]" href="/admin/dashboard"><i class="bi bi-person-circle"></i></a> 
+            <a class="hover:text-[#88B44E]" href="">Sign In</a> / <a
               class="hover:text-[#88B44E]" href="">Sign Up</a>
           </div>
          
@@ -45,6 +46,6 @@ const Header = {
     <hr>
         </div>
         `;
-    },
+  },
 };
 export default Header;
