@@ -1,10 +1,9 @@
-import Header from "../components/header";
-import NavAdmin from "../components/NavAdmin";
+import HeaderAdmin from "../components/headerAdmin";
 
 const SignUp = {
     render() {
         return /*html*/ `
-        ${NavAdmin.render()}
+        ${HeaderAdmin.render()}
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
           <div>
@@ -45,7 +44,7 @@ const SignUp = {
               </div>
         
               <div class="text-sm">
-                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                <a href="/signin" class="font-medium text-indigo-600 hover:text-indigo-500">
                   Sign In?
                 </a>
               </div>

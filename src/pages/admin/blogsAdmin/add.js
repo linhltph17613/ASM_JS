@@ -1,5 +1,5 @@
 import axios from "axios";
-import NavAdmin from "../../../components/NavAdmin";
+import NavAdmin from "../../../components/headerAdmin";
 
 const BlogsAddPage = {
     render() {
@@ -51,36 +51,36 @@ const BlogsAddPage = {
         </div>
         `;
     },
-    afterRender() {
-        const FormAdd = document.querySelector("#form-add-post");
-        const imgPost = document.querySelector("#img-post");
+    // afterRender() {
+    //     const FormAdd = document.querySelector("#form-add-post");
+    //     const imgPost = document.querySelector("#img-post");
 
-        imgPost.addEventListener("change", (e) => {
-            const file = e.target.files[0];
-            const formData = new FormData();
-            formData.append("file", file);
-            formData.append("upload_preset", "dfeh8fmty");
+    //     imgPost.addEventListener("change", (e) => {
+    //         const file = e.target.files[0];
+    //         const formData = new FormData();
+    //         formData.append("file", file);
+    //         formData.append("upload_preset", "dfeh8fmty");
 
-            axios({
-                url: "POST https://api.cloudinary.com/v1_1/demo/image/upload",
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-formendcoded",
-                },
-                data: formData,
-            }).then((res) => {
-                FormAdd.addEventListener("submit", (e) => {
-                    e.preventDefault();
-                    add({
-                        title: document.queryCommandIndeterm("#title-post").value,
-                        img: res.data.secure_url,
-                        desc: document.querySelector("#desc-post").value,
-                    })
-                        .then((result) => console.log(result.data))
-                        .catch((error) => console.log(error));
-                });
-            });
-        });;
-    },
+    //         axios({
+    //             url: "POST https://api.cloudinary.com/v1_1/demo/image/upload",
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/x-www-formendcoded",
+    //             },
+    //             data: formData,
+    //         }).then((res) => {
+    //             FormAdd.addEventListener("submit", (e) => {
+    //                 e.preventDefault();
+    //                 add({
+    //                     title: document.queryCommandIndeterm("#title-post").value,
+    //                     img: res.data.secure_url,
+    //                     desc: document.querySelector("#desc-post").value,
+    //                 })
+    //                     .then((result) => console.log(result.data))
+    //                     .catch((error) => console.log(error));
+    //             });
+    //         });
+    //     });;
+    // },
 };
 export default BlogsAddPage;

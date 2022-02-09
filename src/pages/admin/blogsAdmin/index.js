@@ -1,10 +1,10 @@
-import NavAdmin from "../../../components/NavAdmin";
+import HeaderAdmin from "../../../components/headerAdmin";
 import data from "../../../data";
 const BlogsPage = {
     render() {
         return /*html*/ `
          <div class="min-h-full">
-           ${NavAdmin.render()}
+           ${HeaderAdmin.render()}
             <header class="bg-white shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <!-- This example requires Tailwind CSS v2.0+ -->
