@@ -32,8 +32,8 @@ const Header = {
         <div class="flex font-medium mt-12 ">
           <div class="mx-1 ">
             <a class="hover:text-[#88B44E]" href="/admin/dashboard"><i class="bi bi-person-circle"></i></a> 
-            <a class="hover:text-[#88B44E]" href="">Sign In</a> / <a
-              class="hover:text-[#88B44E]" href="">Sign Up</a>
+            <a class="hover:text-[#88B44E]" href="/signin">Sign In</a> / <a
+              class="hover:text-[#88B44E]" href="/signup">Sign Up</a>
           </div>
          
           <div class="mx-1 hover:text-[#88B44E]">

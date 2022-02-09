@@ -8,6 +8,8 @@ import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
 import ShopPage from "./pages/products";
 import BlogsAddPage from "./pages/admin/blogsAdmin/add";
+import Signin from "./pages/signin";
+import SignUp from "./pages/signup";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = async (content, id) => {
@@ -28,6 +30,9 @@ router.on({
 
 
     // "admin/blogs/:id/edit": => print();
+    "/signin": () => print(Signin),
+    "/signup": () => print(SignUp),
+
 
 });
 router.resolve();
