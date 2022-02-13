@@ -23,7 +23,7 @@ const Header = {
               <li class="menu_item"><a class="menu_item_link" href="/">Home</a></li>
               <li class="menu_item"><a class="menu_item_link" href="/about">About</a></li>
               <li class="menu_item"><a class="menu_item_link" href="/shop">Shop</a></li>
-              <li class="menu_item"><a class="menu_item_link" href="blog">Blog</a></li>
+              <li class="menu_item"><a class="menu_item_link" href="blogs">Blog</a></li>
               <li class="menu_item"><a class="menu_item_link" href="/contact">Contact</a></li>
 
             </ul>

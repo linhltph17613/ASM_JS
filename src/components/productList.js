@@ -1,6 +1,12 @@
+import { getAll } from "../api/blogs";
+
+
 const ProductList = {
-    render() {
-        return /*html*/ `
+  async render() {
+    // Chờ thằng axios.get truy cập API và lấy dữ liệu, 
+    // lấy dữ liệu xong sẽ trả về và gán vào biến response
+    const { data } = await getAll();
+    return /*html*/ `
         <!-- Danh sách sản phẩm -->
     <div class=" text text-center max-w-5xl mx-auto  my-[80px]">
     <p class="font-medium text-[#88B44E] pb-[20px]"> Online store</p>
@@ -9,16 +15,18 @@ const ProductList = {
       primis in faucibus.</p>
   </div>
   <div class="grid grid-cols-3 gap-5 max-w-6xl mx-auto">
-    <div class="overlay  ">
+  ${data.map((post) => `
+<div class="overlay  ">
       <div class="relative  hover:border product-item p-8 text-center">
         <div class="info-item ">
-          <img src="https://i.imgur.com/BPHZXpF.jpg" class="w-full h-full"
+          <img src="${post.img}" class="w-full h-full"
             alt="">
-          <h2 class="text-2xl font-medium">Phoex Dan Cong</h2>
-          <p class="py-3">Duis et aliquam orci. Vivamus augue quam, sollicitudin quis bibendum quis, eleifend vitae
-            velit.</p>
-          <p class="font-medium text-[#88B44E] text-xl font-bold">$ 290</p>
+          <h2 class="text-2xl font-medium">${post.title}</h2>
+          <p class="py-3">${post.desc}</p>
+          <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price}</p>
         </div>
+        `
+    ).join("")}
         <div class=" absolute top-[40%] left-[95px] ">
           <a class="invisible text-over " href=""><button
               class="buttun px-[40px] py-[10px] bg-gray-300 rounded-full font-medium" type="submit">More info <i
@@ -31,6 +39,7 @@ const ProductList = {
 
       </div>
     </div>
+    
     <div class="overlay  ">
       <div class="relative  hover:border product-item p-8 text-center">
         <div class="info-item ">
@@ -77,6 +86,6 @@ const ProductList = {
     </div>
   </div>
         `;
-    },
+  },
 };
 export default ProductList;

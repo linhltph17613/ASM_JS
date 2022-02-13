@@ -1,8 +1,9 @@
+import { signup } from "../api/user";
 import HeaderAdmin from "../components/headerAdmin";
 
 const SignUp = {
-    render() {
-        return /*html*/ `
+  render() {
+    return /*html*/ `
         ${HeaderAdmin.render()}
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
@@ -18,21 +19,22 @@ const SignUp = {
               </a>
             </p>
           </div>
-          <form class="mt-8 space-y-6" action="#" method="POST">
+          <form class="mt-8 space-y-6" id="formSignup" method="POST">
             <input type="hidden" name="remember" value="true">
             <div class="rounded-md shadow-sm -space-y-px">
+            <div>
+                <label for="username" class="sr-only">username</label>
+                <input id="username" name="email" type="user" autocomplete="user" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Username">
+              </div>
               <div>
-                <label for="email-address" class="sr-only">Email address</label>
-                <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                <label for="email" class="sr-only">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
               </div>
               <div>
                 <label for="password" class="sr-only">Password</label>
                 <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
               </div>
-              <div>
-                <label for="re-password" class="sr-only">Re-password</label>
-                <input id="re-password" name="re-password" type="re-password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Re-password">
-              </div>
+              
             </div>
         
             <div class="flex items-center justify-between">
@@ -66,6 +68,21 @@ const SignUp = {
         </div>
         
         `;
-    }
+  },
+  afterRender() {
+    const formSignup = document.querySelector("#formSignup");
+    formSignup.addEventListener("submit", (e) => {
+      e.preventDefault();
+      //call api
+      signup({
+        username: document.querySelector("#username").value,
+        email: document.querySelector("#email").value,
+        password: document.querySelector("#password").value,
+
+      });
+      // window.location.href = "/#/signin";
+      // thông báo bạn đăng nhập thành công....
+    });
+  },
 };
 export default SignUp;

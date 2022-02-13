@@ -14,7 +14,7 @@ const HomePage = {
         ${New1.render()}
         ${ProductList.render()}
         ${Blog.render()}
-        ${VideoTea.rendere()}
+        ${VideoTea.render()}
         ${Footer.render()}
         `;
     },

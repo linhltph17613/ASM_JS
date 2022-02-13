@@ -2,7 +2,8 @@ const data = [
     {
         createdAt: "2022-01-10T07:26:52.549Z",
         title: "Annie Stroman",
-        img: "http://placeimg.com/640/480/fashion",
+        img: "https://i.imgur.com/BPHZXpF.jpg",
+        price: "290",
         desc: "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
         id: "1",
     },
@@ -119,4 +120,5 @@ const data = [
         id: "17",
     },
 ];
+
 export default data;

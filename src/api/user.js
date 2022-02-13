@@ -1,9 +1,11 @@
-import axios from "axios";
+import instance from "./instance";
 
-const instance = axios.create({
-    baseURL: "http://localhost:3000/",
-    headers: {
-        "Content-Type": "application/json",
-    },
-});
-export default instance;
+export const signin = (user) => {
+    const url = "/signin";
+    return instance.post(url, user);
+};
+
+export const signup = (user) => {
+    const url = "/signup";
+    return instance.post(url, user);
+};

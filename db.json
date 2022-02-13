@@ -1,6 +1,5 @@
 {
-  "post": 
-  [
+  "post": [
     {
       "createdAt": "2022-01-15T01:54:24.955Z",
       "title": "Tiffany Wisoky",
@@ -163,18 +162,102 @@
       "id": "38"
     },
     {
-      "createdAt": "2022-01-15T01:54:24.955Z",
-      "title": "Tiffany Wisoky",
-      "img": "http://placeimg.com/640/480/cats",
-      "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": "39"
+      "title": "bài viết 1",
+      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644563125/ckrg2lfd2oinlzj1pegj.jpg",
+      "desc": "bài viết 1bài viết 1bài viết 1",
+      "id": "eWuGZ2i"
     },
     {
-      "createdAt": "2022-01-19T19:07:46.337Z",
-      "title": "Đặng Đình Khải",
-      "img": "http://placeimg.com/640/480/sports",
-      "desc": "Content description!",
-      "id": "40"
+      "title": "bài viết 2",
+      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644563214/ugy1kvlxeczkepknf0ou.jpg",
+      "desc": "bài viết 2bài viết 2",
+      "id": "SRWqmFp"
+    },
+    {
+      "title": "bài viết 3",
+      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644563352/bq7mk9bb9lno5aqdazaf.jpg",
+      "desc": "bài viết 3bài viết 3",
+      "id": "7GtjqiJ"
+    }
+  ],
+  "users": [
+    {
+      "email": "linhlethuy1911@gmail.com",
+      "password": "$2a$10$KnaV41ACWajWF0RN5eoOlOdsd6NYNTC3oyHvILT8plETf/DrmfxBS",
+      "username": "linhhhh",
+      "id": 1
+    },
+    {
+      "email": "linh1911@gmail.com",
+      "password": "$2a$10$Bjto.DFa7/CbEYPu4zMKQegoQYAGGP7s1aUrBWeEsTRO0090tVMQK",
+      "username": "linhhhh",
+      "id": 2
+    },
+    {
+      "email": "tranh1234@gmail.com",
+      "password": "$2a$10$g0V36tIsyJmXjF8zBlgGa.GJ3EmpcNGmtrNGSIQyWYkLIi1BtpmYi",
+      "username": "trang",
+      "id": 3
+    },
+    {
+      "email": "trang@gmail.com",
+      "password": "$2a$10$EHG0eJs19FZz3FYgttprPeezEUl5C28mFCkP6y55.QG9D7jtFQD1C",
+      "username": "trangggg",
+      "id": 4
+    },
+    {
+      "email": "huong@gmail.com",
+      "password": "$2a$10$SwN/4B1fNhVberBDOIjzTOA40X1TmO7dLP.4rZEu5CeOXsPiSpI3y",
+      "username": "huong",
+      "id": 5
+    },
+    {
+      "email": "lan@gmaul.com",
+      "password": "$2a$10$ayJzaqnBC66uCD6Y0LJM6eiw.00QFXUx6dvxGCes3nm1CPHmlJEae",
+      "username": "lan",
+      "id": 6
+    },
+    {
+      "email": "he@gmail.com",
+      "password": "$2a$10$nvPQya2kfpec1nExKu87YuHUffKHyFEdHYTd5POsl0tGdtZhxuZI2",
+      "username": "henny",
+      "id": 7
+    },
+    {
+      "email": "lan@gmail.com",
+      "password": "$2a$10$RWzoxuLuPnn2bMjLzCgiZeJ1ljndJQc7w6aOYsr9p42MaKwEqOdFy",
+      "username": "lann",
+      "id": 8
+    },
+    {
+      "email": "anh1234@gmail.com",
+      "password": "$2a$10$9BHjHe3xrGm0ENs446GO2O1Dzwxg/.MSJVWrEoQgWTeCf672iv0aW",
+      "username": "anh",
+      "id": 9
+    },
+    {
+      "email": "linh@gmail.com",
+      "password": "$2a$10$f1bm0nGIrjBeSx3/WvDTl.A1ncc7SO5.dsNs3J9RZYopCLbQR//Vq",
+      "username": "linh",
+      "id": 10
+    },
+    {
+      "email": "an@gmail.com",
+      "password": "$2a$10$uWQYVMR7NJBoAQTCle9V2uPEPa2aQx7YfqTYDjndDZT68DRJ1JP.W",
+      "username": "an",
+      "id": 11
+    },
+    {
+      "email": "linh@gmail",
+      "password": "$2a$10$EldK8W.RU98PekMeKDUKyO78ZPRQqQBGMP34diVOZU8v3lcfvn./u",
+      "username": "linh",
+      "id": 12
+    },
+    {
+      "email": "vuong@gmail.com",
+      "password": "$2a$10$g8SU74oDsMtyrOFHkWt63edV0j.mW2y5Lpz9vvRAolGX.uWmx6mT2",
+      "username": "vuong",
+      "id": 13
     }
   ]
 }

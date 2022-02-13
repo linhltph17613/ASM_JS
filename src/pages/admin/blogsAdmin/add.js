@@ -1,4 +1,5 @@
 import axios from "axios";
+import { add } from "../../../api/blogs";
 import NavAdmin from "../../../components/headerAdmin";
 
 const BlogsAddPage = {
@@ -51,36 +52,42 @@ const BlogsAddPage = {
         </div>
         `;
     },
-    // afterRender() {
-    //     const FormAdd = document.querySelector("#form-add-post");
-    //     const imgPost = document.querySelector("#img-post");
+    afterRender() {
+        const FormAdd = document.querySelector("#form-add-post");
+        const imgPost = document.querySelector("#img-post");
 
-    //     imgPost.addEventListener("change", (e) => {
-    //         const file = e.target.files[0];
-    //         const formData = new FormData();
-    //         formData.append("file", file);
-    //         formData.append("upload_preset", "dfeh8fmty");
 
-    //         axios({
-    //             url: "POST https://api.cloudinary.com/v1_1/demo/image/upload",
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/x-www-formendcoded",
-    //             },
-    //             data: formData,
-    //         }).then((res) => {
-    //             FormAdd.addEventListener("submit", (e) => {
-    //                 e.preventDefault();
-    //                 add({
-    //                     title: document.queryCommandIndeterm("#title-post").value,
-    //                     img: res.data.secure_url,
-    //                     desc: document.querySelector("#desc-post").value,
-    //                 })
-    //                     .then((result) => console.log(result.data))
-    //                     .catch((error) => console.log(error));
-    //             });
-    //         });
-    //     });;
-    // },
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dfeh8fmty/image/upload";
+        const CLOUDINARY_PRESET = "xrax0ays";
+
+        FormAdd.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            //lấy giá trị input file
+            const file = imgPost.files[0];
+
+
+            //append vào object formData
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", CLOUDINARY_PRESET);
+
+            //call api clou..
+            const response = await axios.post(CLOUDINARY_API, formData, {
+                headers: {
+                    "Content-Type": "application/form-data"
+                }
+            });
+            console.log(response);
+
+            //call api thêm bài viết
+            add({
+                "title": document.querySelector("#title-post").value,
+                "img": response.data.url,
+                "desc": document.querySelector("#desc-post").value,
+
+            });
+
+        });
+    },
 };
 export default BlogsAddPage;

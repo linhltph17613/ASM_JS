@@ -1,7 +1,9 @@
+import { getAll, remove } from "../../../api/blogs";
 import HeaderAdmin from "../../../components/headerAdmin";
-import data from "../../../data";
 const BlogsPage = {
-    render() {
+    async render() {
+        const { data } = await getAll();
+
         return /*html*/ `
          <div class="min-h-full">
            ${HeaderAdmin.render()}
@@ -76,14 +78,12 @@ const BlogsPage = {
                         <div class="text-sm font-medium text-gray-900">
                         ${postNew.title}
                         </div>
-                        <div class="text-sm text-gray-500">
-                        ${postNew.title}
-                        </div>
+                        
                         </div>
                     </div>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-900">${postNew.desc}</div>
+                    <td class="px-6 py-4">
+                    <p class="text-sm text-gray-900  truncate  w-[510px]">${postNew.desc}</p>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -95,7 +95,8 @@ const BlogsPage = {
 
                     </td>
                     <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <a href="/admin/news/${postNew.id}/delete" class="text-red hover:text-red-600">Delete</a>
+                                       <button type="submit" class="text-red hover:text-red-600" id="delete" data-id="${postNew.id}" >Delete</button>
+                                        
 
                     </td>
                    
@@ -119,5 +120,20 @@ const BlogsPage = {
         </div>
         `;
     },
+    afterRender() {
+        const Delete = document.querySelectorAll("#delete");
+        Delete.forEach((button) => {
+            const { id } = button.dataset;
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                const confirm = window.confirm("Do you want to delele? ");
+                if (confirm) {
+                    remove(id).then(() => "Do you want to delele?");
+
+                }
+            });
+
+        });
+    }
 };
 export default BlogsPage;

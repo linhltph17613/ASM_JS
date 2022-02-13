@@ -1,7 +1,7 @@
 const VideoTea = {
-  rendere() {
+  render() {
     return /*html*/ `
-           <!-- Video -->
+         
     <div class="my-[100px]">
     <div class="z-0 h-500px">
       <img class="" src="https://i.imgur.com/cWb5KQZ.jpg" alt="">
@@ -15,8 +15,7 @@ const VideoTea = {
       </div>
       <video  class="mx-auto w-4/5" controls>
         <source class="" src="./src/5867425058260468807.mp4" type="video/mp4">
-        alooo
-      </video>
+            </video>
     </div>
     
   </div>
