@@ -1,32 +1,11 @@
 {
   "post": [
     {
-      "createdAt": "2022-01-15T01:54:24.955Z",
-      "title": "Tiffany Wisoky",
-      "img": "http://placeimg.com/640/480/cats",
-      "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": "8"
-    },
-    {
       "createdAt": "2022-01-15T02:21:11.908Z",
       "title": "Mrs. Drew Farrell",
       "img": "http://placeimg.com/640/480/fashion",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "id": "13"
-    },
-    {
-      "createdAt": "2022-01-14T11:14:02.843Z",
-      "title": "Lorena Cole",
-      "img": "http://placeimg.com/640/480/technics",
-      "desc": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": "14"
-    },
-    {
-      "createdAt": "2022-01-15T00:11:58.958Z",
-      "title": "Vừa sửa",
-      "img": "http://placeimg.com/640/480/technics",
-      "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": "15"
     },
     {
       "createdAt": "2022-01-15T04:39:49.775Z",
@@ -225,7 +204,20 @@
       "id": 13
     }
   ],
-  "product" : [
-    
+  "product": [
+    {
+      "title": "trà xanhhh",
+      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644908304/yxoa3ymmwogwwj9rsj3v.jpg",
+      "desc": "trà xanhhhtrà xanhhhtrà xanhhhtrà xanhhhtrà xanhhhtrà xanhhhtrà xanhhhtrà xanhhhtrà xanhhh",
+      "price": "200",
+      "id": 1
+    },
+    {
+      "title": "trà đen",
+      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644939167/emomwtrvqnmpkjeduhe8.jpg",
+      "desc": "adhsfbsdsnc snxajsnjdwebgbejmvd csxbadbweufwfc bcjkqbsdfghjkoiuytrewqxcvbnm,.kjhgfdsaertyuio",
+      "price": "34",
+      "id": 2
+    }
   ]
 }

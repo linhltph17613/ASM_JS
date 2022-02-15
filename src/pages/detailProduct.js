@@ -1,15 +1,15 @@
-import { get } from "../api/product";
+import { get } from "../api/products";
 const DetailProduct = {
-    async render(id) {
-        const { data } = await get(id);
-        return /*html*/ `
+  async render(id) {
+    const { data } = await get(id);
+    return /*html*/ `
         <div class="">
       <div class="grid grid-cols-2 max-w-5xl mx-auto">
         <div class="">
           <img src="https://i.imgur.com/BPHZXpF.jpg" alt="">
         </div>
         <form class="">
-          <h1 class="font-medium text-4xl py-5">An Xi Mao Xie</h1>
+          <h1 class="font-medium text-4xl py-5">${data.title}</h1>
           <span class="text-amber-500">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill "></i>
@@ -17,9 +17,8 @@ const DetailProduct = {
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
           </span> <br>
-          <p class="font-medium text-[#88B44E] text-xl font-bold py-5">$2.90</p>
-          <p class="truncate  w-[510px] py-5">Duis et aliquam orci. Vivamus augue quam, sollicitudin quis bibendum quis,
-            eleifend vitaevelit.y</p>
+          <p class="font-medium text-[#88B44E] text-xl font-bold py-5">${data.price}</p>
+          <p class="truncate  w-[510px] py-5">${data.desc}</p>
           <input type="number" min="1" max="10" class="border pl-2 outline-0">
           <button class="buttun px-10 py-3 rounded-full bg-[#88B44E] hover:text-white m-5" type="submit">Add to
             cart</button>
@@ -82,6 +81,6 @@ const DetailProduct = {
       </div>
     </div>
         `;
-    },
+  },
 };
 export default DetailProduct;

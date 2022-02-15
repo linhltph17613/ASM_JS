@@ -1,4 +1,4 @@
-import { getAll } from "../api/blogs";
+import { getAll } from "../api/products";
 
 
 const ProductList = {
@@ -22,7 +22,7 @@ const ProductList = {
             
     
         <div class=" absolute top-[40%] left-[95px] ">
-          <a class="invisible text-over " href=""><button
+          <a class="invisible text-over " href="/products/${post.id}"><button
               class="buttun px-[40px] py-[10px] bg-gray-300 rounded-full font-medium" type="submit">More info <i
               class="bi bi-chevron-right text-white  text-[6px] p-1 bg-[#88B44E] boder ml-1 rounded-full"></i></button></a><br>
           <a class="invisible text-over" href=""><button

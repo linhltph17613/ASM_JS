@@ -11,6 +11,9 @@ import BlogsAddPage from "./pages/admin/blogsAdmin/add";
 import Signin from "./pages/signin";
 import SignUp from "./pages/signup";
 import { doc } from "prettier";
+import ProductPage from "./pages/admin/product";
+import ProductAddPage from "./pages/admin/product/add";
+import DetailProduct from "./pages/detailProduct";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -48,6 +51,9 @@ router.on({
     "/admin/dashboard": () => print(DashboardPage),
     "/admin/blogs": () => print(BlogsPage),
     "/admin/blogs/add": () => print(BlogsAddPage),
+    "/admin/products": () => print(ProductPage),
+    "/products/:id": (value) => print(DetailProduct, value.data.id),
+    "/admin/products/add": () => print(ProductAddPage),
 
 
     // "admin/blogs/:id/edit": => print();
