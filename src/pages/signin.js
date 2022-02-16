@@ -88,7 +88,8 @@ const Signin = {
 
                         if (data.user.id === 10) {
 
-                            document.location.href = "/admin/dashboard";
+                            document.location.href = "/";
+                            // toastr.success("xin chaof admin !");
                         } else {
                             document.location.href = "/";
                         }

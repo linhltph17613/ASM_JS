@@ -22,9 +22,13 @@ const SignUp = {
           <form class="mt-8 space-y-6" id="formSignup" method="POST">
             <input type="hidden" name="remember" value="true">
             <div class="rounded-md shadow-sm -space-y-px">
-            <div>
+              <div>
                 <label for="username" class="sr-only">username</label>
                 <input id="username" name="email" type="user" autocomplete="user" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Username">
+              </div>
+              <div>
+                <label for="image" class="sr-only">Image</label>
+                <input id="image" name="image" type="file" autocomplete="image" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="">
               </div>
               <div>
                 <label for="email" class="sr-only">Email address</label>
@@ -76,6 +80,8 @@ const SignUp = {
       //call api
       signup({
         username: document.querySelector("#username").value,
+        image: document.querySelector("#image").value,
+
         email: document.querySelector("#email").value,
         password: document.querySelector("#password").value,
 

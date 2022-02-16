@@ -5,18 +5,22 @@
 .menu_item{
     @apply  p-4 ;
 } */
-.menu_item_link{
-    @apply block py-3 px-6  hover:text-[#88B44E] font-medium ;
+.menu_item_link {
+  @apply block py-3 px-3  font-medium hover:text-[#88B44E];
 }
-.buttun:hover{
-    background: linear-gradient(to right,rgba(111,167,0,0.9) 0%,rgba(182,215,0,0.9) 100%);
+.buttun:hover {
+  background: linear-gradient(
+    to right,
+    rgba(111, 167, 0, 0.9) 0%,
+    rgba(182, 215, 0, 0.9) 100%
+  );
 }
-.overlay{
-    @apply overflow-hidden ;
+.overlay {
+  @apply overflow-hidden;
 }
-.overlay:hover .text-over{
-    @apply visible delay-100;
+.overlay:hover .text-over {
+  @apply visible delay-100;
 }
-.product-item:hover .info-item{
-    @apply opacity-30;
+.product-item:hover .info-item {
+  @apply opacity-30;
 }

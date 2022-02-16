@@ -19,7 +19,7 @@ const DetailProduct = {
           </span> <br>
           <p class="font-medium text-[#88B44E] text-xl font-bold py-5">${data.price}</p>
           <p class="truncate  w-[510px] py-5">${data.desc}</p>
-          <input type="number" min="1" max="10" class="border pl-2 outline-0">
+          <input type="number" min="1" max="10" value="1" class="border pl-2 outline-0">
           <button class="buttun px-10 py-3 rounded-full bg-[#88B44E] hover:text-white m-5" type="submit">Add to
             cart</button>
         </form>

@@ -26,5 +26,8 @@ const HomePage = {
         ${Footer.render()}
         `;
     },
+    afterRender() {
+        Header.afterRender();
+    }
 };
 export default HomePage;

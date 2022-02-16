@@ -202,6 +202,19 @@
       "password": "$2a$10$g8SU74oDsMtyrOFHkWt63edV0j.mW2y5Lpz9vvRAolGX.uWmx6mT2",
       "username": "vuong",
       "id": 13
+    },
+    {
+      "email": "vuongzx@gmail.com",
+      "password": "$2a$10$WhDJ.70tHi62S9Z0XQ1OxOWBxJXXOtu.VBLMfAi3jRb.xmQRPblNy",
+      "username": "vuong4512",
+      "id": 14
+    },
+    {
+      "email": "hary@gmail.com",
+      "password": "$2a$10$4/Xy5DRGuqNwaeAvDbaK4eq9L8bg6E5w6SUbp7jsGClThPZF/1jU2",
+      "username": "Hary",
+      "image": "C:\\fakepath\\download.jpg",
+      "id": 15
     }
   ],
   "product": [
@@ -213,10 +226,10 @@
       "id": 1
     },
     {
-      "title": "trà đen",
-      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644939167/emomwtrvqnmpkjeduhe8.jpg",
-      "desc": "adhsfbsdsnc snxajsnjdwebgbejmvd csxbadbweufwfc bcjkqbsdfghjkoiuytrewqxcvbnm,.kjhgfdsaertyuio",
-      "price": "34",
+      "title": "trà 1",
+      "img": "http://res.cloudinary.com/dfeh8fmty/image/upload/v1644988376/qymhxze94ekdilot8oee.jpg",
+      "desc": "trà 1trà 1trà 1trà 1trà 1trà 1trà 1trà 1trà 1",
+      "price": "65",
       "id": 2
     }
   ]
