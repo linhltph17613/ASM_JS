@@ -1,6 +1,8 @@
 import axios from "axios";
 import { add } from "../../../api/products";
 import NavAdmin from "../../../components/headerAdmin";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const ProductAddPage = {
     render() {
@@ -87,10 +89,9 @@ const ProductAddPage = {
                 "img": response.data.url,
                 "desc": document.querySelector("#desc").value,
                 "price": document.querySelector("#price").value,
-
-
             });
-
+            toastr.success("Thêm thành công !");
+            setTimeout(() => window.location.href = "/#/admin/products", 2000);
         });
     },
 };

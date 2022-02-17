@@ -98,6 +98,8 @@ const ShopPage = {
   </div>
       ${Footer.render()}
         `;
-  },
+  }, afterRender() {
+    Header.afterRender();
+  }
 };
 export default ShopPage;

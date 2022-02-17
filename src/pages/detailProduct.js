@@ -1,9 +1,25 @@
+import Header from "../components/header";
 import { get } from "../api/products";
+import Banner from "../components/banner";
 const DetailProduct = {
   async render(id) {
     const { data } = await get(id);
     return /*html*/ `
-        <div class="">
+      ${Header.render()}
+      <div class="">
+          <img class="w-full" src="https://i.imgur.com/06kGrh2.jpg" alt=""
+            srcset="">
+        </div>
+        <div class="bg-lime-50 py-4">
+          <div class=" flex justify-between items-center max-w-5xl mx-auto">
+            <div class="">
+              <a class="font-medium hover:text-[#88B44E] " href="/">Home</a> > <a class="font-medium text-[#88B44E]" href="/">Detail Product</a>
+            </div>
+        
+          </div>
+        </div>
+        
+        <div class="mt-10">
       <div class="grid grid-cols-2 max-w-5xl mx-auto">
         <div class="">
           <img src="https://i.imgur.com/BPHZXpF.jpg" alt="">
@@ -17,7 +33,7 @@ const DetailProduct = {
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
           </span> <br>
-          <p class="font-medium text-[#88B44E] text-xl font-bold py-5">${data.price}</p>
+          <p class="font-medium text-[#88B44E] text-xl font-bold py-5">${data.price} $</p>
           <p class="truncate  w-[510px] py-5">${data.desc}</p>
           <input type="number" min="1" max="10" value="1" class="border pl-2 outline-0">
           <button class="buttun px-10 py-3 rounded-full bg-[#88B44E] hover:text-white m-5" type="submit">Add to
@@ -81,6 +97,8 @@ const DetailProduct = {
       </div>
     </div>
         `;
-  },
+  }, afterRender() {
+    Header.afterRender();
+  }
 };
 export default DetailProduct;

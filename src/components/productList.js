@@ -1,4 +1,5 @@
 import { getAll } from "../api/products";
+import Header from "./header";
 
 
 const ProductList = {
@@ -8,7 +9,6 @@ const ProductList = {
     const { data } = await getAll();
     return /*html*/ `
         <!-- Danh sách sản phẩm -->
-    
       ${data.map((post) => `
         <div class="overlay  ">
               <div class="relative  hover:border product-item p-8 text-center">
@@ -16,8 +16,8 @@ const ProductList = {
                   <img src="${post.img}" class="w-full h-full"
                     alt="">
                   <h2 class="text-2xl font-medium">${post.title}</h2>
-                  <p class="py-3">${post.desc}</p>
-                  <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price}</p>
+                  <p class="py-3 truncate  w-[200px]">${post.desc}</p>
+                  <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price} s$</p>
                 </div>
             
     

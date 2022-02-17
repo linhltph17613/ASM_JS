@@ -1,5 +1,4 @@
 import { getAll, remove } from "../api/blogs";
-import BlogPage from "../pages/blogs";
 import { reRender } from "../utils/rerender";
 
 const tablePost = {

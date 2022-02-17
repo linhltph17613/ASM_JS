@@ -1,7 +1,8 @@
 import axios from "axios";
 import { add } from "../../../api/blogs";
 import NavAdmin from "../../../components/headerAdmin";
-
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 const BlogsAddPage = {
     render() {
         return /*html*/ `
@@ -86,6 +87,8 @@ const BlogsAddPage = {
                 "desc": document.querySelector("#desc-post").value,
 
             });
+            toastr.success("Thêm bài viết thành công!");
+            setTimeout(() => window.location.href = "/#/admin/blogs", 2000);
 
         });
     },

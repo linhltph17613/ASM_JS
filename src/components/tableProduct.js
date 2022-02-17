@@ -7,7 +7,7 @@ const tableProduct = {
          ${data.map((postNew) => `
                 
                 <tr>
-                <td class="text-center">1</td>
+                <td class="text-center">${postNew.id}</td>
                 <td class="">${postNew.title}</td>
                 <td class="h-10 w-10 p-2"><img src="${postNew.img}"></td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm "><p class="truncate  w-[350px]">${postNew.desc}</p></td>

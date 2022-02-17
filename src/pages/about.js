@@ -3,12 +3,9 @@ import Header from "../components/header";
 import New1 from "../components/new1";
 
 const AboutPage = {
-    render() {
-        return /*html*/`
+  render() {
+    return /*html*/`
         ${Header.render()}
-        
-  
-       
         <div class="">
           <img class="w-full" src="https://i.imgur.com/06kGrh2.jpg" alt=""
             srcset="">
@@ -25,6 +22,9 @@ const AboutPage = {
         ${New1.render()}
         ${Footer.render()}
        `;
-    },
+  },
+  afterRender() {
+    Header.afterRender();
+  }
 };
 export default AboutPage;

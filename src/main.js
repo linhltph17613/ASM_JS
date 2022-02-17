@@ -10,7 +10,7 @@ import ShopPage from "./pages/products";
 import BlogsAddPage from "./pages/admin/blogsAdmin/add";
 import Signin from "./pages/signin";
 import SignUp from "./pages/signup";
-import { doc } from "prettier";
+// import { doc } from "prettier";
 import ProductPage from "./pages/admin/product";
 import ProductAddPage from "./pages/admin/product/add";
 import DetailProduct from "./pages/detailProduct";

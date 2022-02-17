@@ -11,14 +11,13 @@ const BlogPage = {
             srcset="">
         </div>
         <div class="bg-lime-50 py-4">
-      <div class=" flex justify-between items-center max-w-5xl mx-auto">
-        <div class="">
-          <a class="font-medium hover:text-[#88B44E] " href="/">Home</a> > <a class="font-medium text-[#88B44E]"
-            href="/">Blog</a>
-        </div>
+          <div class=" flex justify-between items-center max-w-5xl mx-auto">
+            <div class="">
+              <a class="font-medium hover:text-[#88B44E] " href="/">Home</a> > <a class="font-medium text-[#88B44E]" href="/">Blog</a>
+            </div>
         
-      </div>
-    </div>
+          </div>
+        </div>
      <div class="flex gap-5 max-w-6xl mx-auto mb-9">
       <div class="bg-gray-100 px-[50px] py-9 w-1/3">
         <div class="py-3">
@@ -132,6 +131,8 @@ const BlogPage = {
     </div>
        ${Footer.render()}
         `;
-  },
+  }, afterRender() {
+    Header.afterRender();
+  }
 };
 export default BlogPage;
