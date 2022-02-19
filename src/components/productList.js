@@ -9,7 +9,7 @@ const ProductList = {
     const { data } = await getAll();
     return /*html*/ `
         <!-- Danh sách sản phẩm -->
-      ${data.map((post) => `
+      ${data.map((post) => /*html*/`
         <div class="overlay  ">
               <div class="relative  hover:border product-item p-8 text-center">
                 <div class="info-item ">
@@ -23,7 +23,7 @@ const ProductList = {
     
         <div class=" absolute top-[40%] left-[95px] ">
           <a class="invisible text-over " href="/products/${post.id}"><button
-              class="buttun px-[40px] py-[10px] bg-gray-300 rounded-full font-medium" type="submit">More info <i
+              class="buttun px-[40px] py-[10px] bg-gray-300 rounded-full font-medium cursor-pointer" >More info <i
               class="bi bi-chevron-right text-white  text-[6px] p-1 bg-[#88B44E] boder ml-1 rounded-full"></i></button></a><br>
           <a class="invisible text-over" href=""><button
               class="buttun mt-5 px-[40px] py-[10px] bg-[#88B44E] text-white rounded-full font-medium"

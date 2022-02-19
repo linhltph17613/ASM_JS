@@ -5,7 +5,7 @@ const Header = {
   render() {
     // console.log("abc");+
     return /*html*/ `
-     <div>
+     <div id="header">
       <div class="mb-6">
         <div class="flex bg-[#88B44E] justify-around text-white">
           <div class="p-2">
@@ -23,7 +23,7 @@ const Header = {
             <img src="https://i.imgur.com/GZSIoZC.png" width="250" alt="" srcset="">
           </div>
           <div class="mt-10">
-            ${localStorage.getItem("user") ? `
+            ${localStorage.getItem("user") ? /*html*/`
               <ul class="flex">
                   <li class="menu_item"><a class="menu_item_link" href="/">Home</a></li>
                   <li class="menu_item"><a class="menu_item_link" href="/#/about">About</a></li>
@@ -41,7 +41,12 @@ const Header = {
                   </div>
 
                   <div class="mx-1 hover:text-[#88B44E]">
-                    <b><i class="bi bi-cart3"></i></b>
+                    <span class="relative">
+                    <i class="bi bi-cart3 text-xl " ></i>
+                      
+                      <div class="absolute px-2 py-1  bg-red-300 rounded-full -top-[10px] text-sm -right-[10px]">1</div>
+                    </span>
+                    
                   </div>
                </div>
             `:
@@ -62,7 +67,12 @@ const Header = {
                   </div>
 
                   <div class="mx-1 hover:text-[#88B44E]">
-                    <b><i class="bi bi-cart3"></i></b>
+                    <span class="relative">
+                    <i class="bi bi-cart3 text-xl " ></i>
+                      
+                      <div class="absolute px-2 py-1  bg-red-300 rounded-full -top-[10px] text-sm -right-[10px]">1</div>
+                    </span>
+                    
                   </div>
                </div>
              `}

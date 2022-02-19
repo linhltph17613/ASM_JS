@@ -1,6 +1,10 @@
 import Header from "../components/header";
 import { get } from "../api/products";
-import Banner from "../components/banner";
+import "toastr/build/toastr.min.css";
+import toastr from "toastr";
+import { addToCart } from "../utils/cart";
+import { reRender } from "../utils/rerender";
+
 const DetailProduct = {
   async render(id) {
     const { data } = await get(id);
@@ -24,7 +28,7 @@ const DetailProduct = {
         <div class="">
           <img src="https://i.imgur.com/BPHZXpF.jpg" alt="">
         </div>
-        <form class="">
+        <div class="">
           <h1 class="font-medium text-4xl py-5">${data.title}</h1>
           <span class="text-amber-500">
             <i class="bi bi-star-fill"></i>
@@ -35,10 +39,10 @@ const DetailProduct = {
           </span> <br>
           <p class="font-medium text-[#88B44E] text-xl font-bold py-5">${data.price} $</p>
           <p class="truncate  w-[510px] py-5">${data.desc}</p>
-          <input type="number" min="1" max="10" value="1" class="border pl-2 outline-0">
-          <button class="buttun px-10 py-3 rounded-full bg-[#88B44E] hover:text-white m-5" type="submit">Add to
+          <input type="number"  id="inputValue" value="1" class="border pl-2 outline-0 w-16 p-2">
+          <button id="btnAddToCart" class="buttun px-10 py-3 rounded-full bg-[#88B44E] hover:text-white m-5" type="submit">Add to
             cart</button>
-        </form>
+        </div>
       </div>
       <hr class="my-[50px]">
       <div class="grid grid-cols-2 max-w-5xl mx-auto ">
@@ -97,8 +101,19 @@ const DetailProduct = {
       </div>
     </div>
         `;
-  }, afterRender() {
+  }, afterRender(id) {
     Header.afterRender();
+    const btnAddToCart = document.querySelector("#btnAddToCart");
+    const inputValue = document.querySelector("#inputValue");
+
+    btnAddToCart.addEventListener("click", async () => {
+      const { data } = await get(id);
+      addToCart({ ...data, quantity: inputValue.value ? +inputValue.value : 1 }, function () {
+        toastr.success("Thêm vào giỏ hàng thành công!");
+        reRender(Header, "#header");
+      });
+
+    });
   }
 };
 export default DetailProduct;

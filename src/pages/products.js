@@ -95,7 +95,9 @@ const ShopPage = {
         ${await ProductList.render()}
 
       </div>
+      
   </div>
+  
       ${Footer.render()}
         `;
   }, afterRender() {
