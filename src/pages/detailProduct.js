@@ -108,9 +108,10 @@ const DetailProduct = {
 
     btnAddToCart.addEventListener("click", async () => {
       const { data } = await get(id);
-      addToCart({ ...data, quantity: inputValue.value ? +inputValue.value : 1 }, function () {
+      addToCart({ ...data, quantity: inputValue.value ? +inputValue.value : 1, total: inputValue.value * data.price }, function () {
         toastr.success("Thêm vào giỏ hàng thành công!");
         reRender(Header, "#header");
+        window.location.href = "/cart";
       });
 
     });

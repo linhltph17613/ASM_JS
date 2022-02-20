@@ -14,7 +14,7 @@ const tableProduct = {
                 
                 <td class="px-2 py-4 whitespace-nowrap text-sm ">${postNew.price}</td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <a href="/admin/blogs/${postNew.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                        <a href="/admin/products/${postNew.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
 
                     </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">

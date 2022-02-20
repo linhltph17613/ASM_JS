@@ -40,14 +40,16 @@ const Header = {
                      <div class="hover:text-[#88B44E] ml-5 font-medium cursor-pointer" id="logout">Logout</div>
                   </div>
 
-                  <div class="mx-1 hover:text-[#88B44E]">
-                    <span class="relative">
-                    <i class="bi bi-cart3 text-xl " ></i>
+                  <a href="/cart">
+                    <div class="mx-1 hover:text-[#88B44E]">
+                      <span class="relative">
+                      <i class="bi bi-cart3 text-xl " ></i>
+                        
+                        <div class="absolute px-2 py-1  bg-red-300 rounded-full -top-[10px] text-sm -right-[10px]">1</div>
+                      </span>
                       
-                      <div class="absolute px-2 py-1  bg-red-300 rounded-full -top-[10px] text-sm -right-[10px]">1</div>
-                    </span>
-                    
-                  </div>
+                    </div>
+                  </a>
                </div>
             `:
         `
@@ -66,14 +68,17 @@ const Header = {
                       href="/signup">Sign Up</a>
                   </div>
 
-                  <div class="mx-1 hover:text-[#88B44E]">
-                    <span class="relative">
-                    <i class="bi bi-cart3 text-xl " ></i>
+                  <a href="/cart">
+                    <div class="mx-1 hover:text-[#88B44E]">
+                      
+                      <span class="relative">
+                      <i class="bi bi-cart3 text-xl " ></i>
                       
                       <div class="absolute px-2 py-1  bg-red-300 rounded-full -top-[10px] text-sm -right-[10px]">1</div>
-                    </span>
-                    
-                  </div>
+                      </span>
+                      
+                      </div>
+                    </a>
                </div>
              `}
         </div>

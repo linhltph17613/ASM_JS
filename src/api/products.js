@@ -27,3 +27,7 @@ export const update = (post) => {
     return instance.put(url, post);
 
 };
+export const limit = () => {
+    const url = `product?_limit=3&_sort=id&_order=desc`;
+    return instance.get(url);
+};

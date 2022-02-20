@@ -16,19 +16,26 @@ export const addToCart = (newProduct, next) => {
 };
 
 export const increaseQuantity = (id, next) => {
-    cart.find(item => item.id == id).quantity++;
+    const currentProduct = cart.find(item => item.id == id);
+    currentProduct.quantity++;
+    let priceInt = +currentProduct.price;
+    currentProduct.total += priceInt;
     localStorage.setItem("cart", JSON.stringify(cart));
     next();
 };
-
 export const decreaseQuantity = (id, next) => {
     const currentProduct = cart.find(item => item.id == id);
     currentProduct.quantity--;
+    let priceInt = +currentProduct.price;
+    currentProduct.total -= priceInt;
 
     if (currentProduct.quantity < 1) {
         const confirm = window.confirm("Do you want to delete? ");
         if (confirm) {
             cart = cart.filter(item => item.id != id);
+        } else {
+            currentProduct.quantity = 1;
+            currentProduct.total = priceInt;
         }
     }
     localStorage.setItem("cart", JSON.stringify(cart));
