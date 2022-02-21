@@ -16,7 +16,7 @@ const ProductList = {
                   <img src="${post.img}" class="w-full h-full"
                     alt="">
                   <h2 class="text-2xl font-medium">${post.title}</h2>
-                  <p class="py-3 truncate  w-[200px]">${post.desc}</p>
+                  <p class="py-3 truncate  w-[290px]">${post.desc}</p>
                   <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price} $</p>
                 </div>
             

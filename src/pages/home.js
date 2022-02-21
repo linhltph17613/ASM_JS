@@ -8,9 +8,9 @@ import ProductList from "../components/productList";
 import VideoTea from "../components/video_tea";
 
 const HomePage = {
-    async render() {
-        const { data } = await limit();
-        return /*html*/ `
+  async render() {
+    const { data } = await limit();
+    return /*html*/ `
          ${Header.render()}
         ${Banner.render()}
         ${New1.render()}
@@ -28,7 +28,7 @@ const HomePage = {
                   <img src="${post.img}" class="w-full h-full"
                     alt="">
                   <h2 class="text-2xl font-medium">${post.title}</h2>
-                  <p class="py-3 truncate  w-[200px]">${post.desc}</p>
+                  <p class="py-3 truncate  w-[290px]">${post.desc}</p>
                   <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price} $</p>
                 </div>
             
@@ -45,15 +45,15 @@ const HomePage = {
       </div>
     </div>
     `
-        ).join("")}
+    ).join("")}
         </div>
         ${Blog.render()}
         ${VideoTea.render()}
         ${Footer.render()}
         `;
-    },
-    afterRender() {
-        Header.afterRender();
-    }
+  },
+  afterRender() {
+    Header.afterRender();
+  }
 };
 export default HomePage;

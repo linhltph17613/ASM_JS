@@ -60,13 +60,13 @@ const cartPage = {
         
       </tbody>
        <tfoot class="">
-                    <tr class="py-5"><td colspan="5" class="text-right mt-10 py-5"><b class="text-2xl">Tổng là:</b> <span id="total_cart" >null</span></td></tr>
+                    <tr class="py-5"><td colspan="5" class="text-right mt-10 py-5"><b class="text-2xl">Tổng là:</b> <span id="total_cart" class="text-xl font-medium text-red-500">null</span><b> $ </b></td></tr>
                 </tfoot>
     </table><br><br>
         `;
   },
   afterRender() {
-    // Header.afterRender();
+    Header.afterRender();
     const btns = document.querySelectorAll(".btn");
     btns.forEach(btn => {
       btn.addEventListener("click", function () {
