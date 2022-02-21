@@ -1,12 +1,12 @@
 import { signin } from "../api/user";
-import HeaderAdmin from "../components/headerAdmin";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import Header from "../components/header";
 
 const Signin = {
     render() {
         return /*html*/ `
-        ${HeaderAdmin.render()}
+        ${Header.render()}
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
         <div>

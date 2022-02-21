@@ -44,7 +44,9 @@ const ProductAddPage = {
                 <div>
                 <form id="form-add-product" class="" action="">
                     <p class="py-3 ">Tiêu đề sản phẩm</p> <input class="px-2 outline-0 border rounded-full w-[300px] py-3" type="text" id="title">
-                    <p class="py-3 ">Hình ảnh</p> <input class="bg-white border rounded-full w-[300px] px-3 py-3" type="file" id="img">
+                    <p class="py-3 ">Hình ảnh</p><div class="grid grid-cols-2 gap-8">
+                     <div><input class="bg-white border rounded-full w-[300px] px-3 py-3" type="file" id="img"></div>
+                     </div>
                     <p class="py-3 ">Nội dung</p> <textarea name="your-message" cols="40" rows="10" class="outline-0 px-2 wpcf7-form-control wpcf7-textarea border w-[300px] h-[200px]" id="desc" ></textarea> <br>
                     <p class="py-3 ">Giá</p> <input class="outline-0 px-2 border rounded-full w-[300px] py-3" type="number" id="price"><br>
 
@@ -63,6 +65,7 @@ const ProductAddPage = {
 
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dfeh8fmty/image/upload";
         const CLOUDINARY_PRESET = "xrax0ays";
+
 
         FormAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
