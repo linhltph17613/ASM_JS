@@ -17,6 +17,8 @@ import DetailProduct from "./pages/detailProduct";
 import cartPage from "./pages/cart";
 import AdminEditProducts from "./pages/admin/product/edit";
 import CategoryPage from "./pages/admin/category";
+import CateAddPage from "./pages/admin/category/add";
+import AdminEditcate from "./pages/admin/category/edit";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -52,13 +54,20 @@ router.on({
     "/blogs": () => print(BlogPage),
     "/contact": () => print(ContactPage),
     "/admin/dashboard": () => print(DashboardPage),
+    //Blogs
     "/admin/blogs": () => print(BlogsPage),
     "/admin/blogs/add": () => print(BlogsAddPage),
+    //Products
     "/admin/products/:id/edit": ({ data }) => print(AdminEditProducts, data.id),
     "/admin/products": () => print(ProductPage),
     "/products/:id": (value) => print(DetailProduct, value.data.id),
     "/admin/products/add": () => print(ProductAddPage),
-    "c": () => print(CategoryPage),
+    //category
+    "/admin/category/add": () => print(CateAddPage),
+    "/admin/category/:id/edit": ({ data }) => print(AdminEditcate, data.id),
+
+    "/admin/category": () => print(CategoryPage),
+
     "/cart": () => print(cartPage),
 
     // "admin/blogs/:id/edit": => print();

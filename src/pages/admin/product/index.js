@@ -60,6 +60,9 @@ const ProductPage = {
                    Giá
                     </th>
                     <th scope="col" class="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                   Danh mục
+                    </th>
+                    <th scope="col" class="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                    Edit
                     </th>
                      <th scope="col" class="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">

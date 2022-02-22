@@ -1,8 +1,8 @@
-import { getAll, remove } from "../api/products";
+import { CateProduct, getAll, remove } from "../api/products";
 import { reRender } from "../utils/rerender";
 const tableProduct = {
     async render() {
-        const { data } = await getAll();
+        const { data } = await CateProduct();
         return /*html*/ `
          ${data.map((postNew) => `
                 
@@ -13,10 +13,14 @@ const tableProduct = {
                 <td class="px-2 py-4 whitespace-nowrap text-sm "><p class="truncate  w-[350px]">${postNew.desc}</p></td>
                 
                 <td class="px-2 py-4 whitespace-nowrap text-sm ">${postNew.price}</td>
+                <td class="px-2 py-4 whitespace-nowrap text-sm ">${postNew.cate.name}</td>
+
+                
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
                                         <a href="/admin/products/${postNew.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
 
                     </td>
+
                 <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
                                        <button type="submit" class="text-red hover:text-red-600" id="delete" data-id="${postNew.id}" >Delete</button>
                                         

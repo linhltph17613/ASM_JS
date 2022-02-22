@@ -1,5 +1,5 @@
 import HeaderAdmin from "../../../components/headerAdmin";
-import tableProduct from "../../../components/tableProduct";
+import tableCate from "../../../components/tableCategory";
 const CategoryPage = {
     async render() {
         return /*html*/ `
@@ -17,7 +17,7 @@ const CategoryPage = {
                     </h2>
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                    <a href="/admin/products/add" class="sm:ml-3">
+                    <a href="/admin/category/add" class="sm:ml-3">
                         <button
                             type="button"
                             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -59,28 +59,8 @@ const CategoryPage = {
                     </th>
                 </tr>
                 </thead>
-                <tbody id="tbody-product" class="bg-white divide-y divide-gray-200">
-                <tr>
-                <td class="px-6 py-4 whitespace-nowrap">1</td>
-                <td class="px-6 py-4 whitespace-nowrap">Black Tea</td>
-                <td class="px-4 py-4 whitespace-nowrap">Edit</td>
-                <td class="px-6 py-4 whitespace-nowrap">Delete</td>
-
-                </tr>
-                <tr>
-                <td class="px-6 py-4 whitespace-nowrap">2</td>
-                <td class="px-6 py-4 whitespace-nowrap">Green Tea</td>
-                <td class="px-4 py-4 whitespace-nowrap">Edit</td>
-                <td class="px-6 py-4 whitespace-nowrap">Delete</td>
-
-                </tr>
-                <tr>
-                <td class="px-6 py-4 whitespace-nowrap">3</td>
-                <td class="px-6 py-4 whitespace-nowrap">Organic Tea</td>
-                <td class="px-4 py-4 whitespace-nowrap">Edit</td>
-                <td class="px-6 py-4 whitespace-nowrap">Delete</td>
-
-                </tr>
+                <tbody id="tbody-cate" class="bg-white divide-y divide-gray-200">
+                    ${await tableCate.render()}
                 <!-- More people... -->
                 </tbody>
                 
@@ -100,7 +80,7 @@ const CategoryPage = {
         `;
     },
     afterRender() {
-        tableProduct.afterRender();
+        tableCate.afterRender();
     }
 };
 export default CategoryPage;

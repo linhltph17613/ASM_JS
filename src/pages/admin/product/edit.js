@@ -1,10 +1,13 @@
 import { update } from "../../../api/products";
 import { get } from "../../../api/products";
 import axios from "axios";
-
+import { getAll } from "../../../api/cate";
 const AdminEditProducts = {
     async render(id) {
         const { data } = await get(id);
+        const getdataCate = await getAll();
+        const dataCate = getdataCate.data;
+
         return /*html*/ `
         <div class="bg-gray-100 px-10  py-[30px] max-w-3xl mx-auto">
                 <div>
@@ -19,7 +22,11 @@ const AdminEditProducts = {
                     </div>
                         <p class="py-3 ">Nội dung</p> <textarea name="your-message" cols="40" rows="10" class="outline-0 px-2 wpcf7-form-control wpcf7-textarea border w-[300px] h-[200px]" id="desc" value="${data.desc}"></textarea> <br>
                     <p class="py-3 ">Giá</p> <input class="outline-0 px-2 border rounded-full w-[300px] py-3" type="number" id="price" value="${data.price}"><br>
-
+                    <select class="px-2 py-3 outline-0"  id="catee">
+                        ${dataCate.map((item) => /*html*/ `
+                        <option value="${item.id}"> ${item.name} </option>
+                        `).join("")};
+                    </select><br>
                     <button class="my-5 px-8 py-2 bg-[#88B44E] rounded-full buttun text-white" type="submit">Cập nhật </button>
                 </form>
                 </div>
@@ -60,7 +67,9 @@ const AdminEditProducts = {
                 id, title: document.querySelector("#title").value,
                 img: imgUpload ? imgUpload : imgPreview.src,
                 price: document.querySelector("#price").value,
-                desc: document.querySelector("#desc").value
+                desc: document.querySelector("#desc").value,
+                cateId: document.querySelector("#catee").value
+
             })
                 .then((result) => document.location.href = "/admin/products")
                 .catch((error) => console.log(error));

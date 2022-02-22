@@ -3,9 +3,11 @@ import { add } from "../../../api/products";
 import NavAdmin from "../../../components/headerAdmin";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import { getAll } from "../../../api/cate";
 
 const ProductAddPage = {
-    render() {
+    async render() {
+        const { data } = await getAll();
         return /*html*/ `
        <div class="min-h-full">
             ${NavAdmin.render()}
@@ -48,8 +50,13 @@ const ProductAddPage = {
                      <div><input class="bg-white border rounded-full w-[300px] px-3 py-3" type="file" id="img"></div>
                      </div>
                     <p class="py-3 ">Nội dung</p> <textarea name="your-message" cols="40" rows="10" class="outline-0 px-2 wpcf7-form-control wpcf7-textarea border w-[300px] h-[200px]" id="desc" ></textarea> <br>
-                    <p class="py-3 ">Giá</p> <input class="outline-0 px-2 border rounded-full w-[300px] py-3" type="number" id="price"><br>
-
+                    <p class="py-3 ">Giá</p> <input class="outline-0 px-2 border rounded-full w-[300px] py-3" type="number" id="price">
+                    <p class="py-3 ">Danh mục</p> 
+                    <select class="px-2 py-3 outline-0"  id="catee">
+                        ${data.map((item) => /*html*/ `
+                        <option value="${item.id}"> ${item.name} </option>
+                        `).join("")};
+                    </select><br>
                     <button class="my-5 px-8 py-2 bg-[#88B44E] rounded-full buttun text-white" type="submit">Thêm </button>
                 </form>
                 </div>
@@ -86,12 +93,14 @@ const ProductAddPage = {
             });
             console.log(response);
 
-            //call api thêm bài viết
+            //call api thêm sản phẩm
             add({
                 "title": document.querySelector("#title").value,
                 "img": response.data.url,
                 "desc": document.querySelector("#desc").value,
                 "price": document.querySelector("#price").value,
+                "cateId": document.querySelector("#catee").value,
+
             });
             toastr.success("Thêm thành công !");
             setTimeout(() => window.location.href = "/#/admin/products", 2000);
