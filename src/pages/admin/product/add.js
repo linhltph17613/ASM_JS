@@ -3,11 +3,11 @@ import { add } from "../../../api/products";
 import NavAdmin from "../../../components/headerAdmin";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
-import { getAll } from "../../../api/cate";
+import { getAllCate } from "../../../api/cate";
 
 const ProductAddPage = {
     async render() {
-        const { data } = await getAll();
+        const { data } = await getAllCate();
         return /*html*/ `
        <div class="min-h-full">
             ${NavAdmin.render()}

@@ -1,6 +1,7 @@
 import { signup } from "../api/user";
 import Header from "../components/header";
-
+import $ from "jquery";
+import validate from "jquery-validation";
 const SignUp = {
   render() {
     return /*html*/ `
@@ -24,7 +25,7 @@ const SignUp = {
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
                 <label for="username" class="sr-only">username</label>
-                <input id="username" name="email" type="user" autocomplete="user" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Username">
+                <input id="username" name="username" type="username" autocomplete="user" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Username">
               </div>
               <div>
                 <label for="image" class="sr-only">Image</label>
@@ -74,21 +75,59 @@ const SignUp = {
         `;
   },
   afterRender() {
-    const formSignup = document.querySelector("#formSignup");
-    formSignup.addEventListener("submit", (e) => {
-      e.preventDefault();
-      //call api
-      signup({
-        username: document.querySelector("#username").value,
-        image: document.querySelector("#image").value,
+    const formSignup = $("#formSignup");
+    formSignup.validate({
+      errorClass: "text-red-500",
 
-        email: document.querySelector("#email").value,
-        password: document.querySelector("#password").value,
+      rules: {
 
-      });
-      // window.location.href = "/#/signin";
-      // thông báo bạn đăng nhập thành công....
+        username: {
+          required: true,
+        },
+        image: {
+          required: true,
+        },
+        email: {
+          required: true,
+        },
+        password: {
+          required: true,
+        }
+      },
+      messages: {
+        username: {
+          required: "Không được để trống!",
+        },
+        image: {
+          required: "Không được để trống!",
+        },
+        email: {
+          required: "Không được để trống!",
+        },
+        password: {
+          required: "Không được để trống!",
+        }
+      },
+      submitHandler: () => {
+        async function SignupHandler() {
+          signup({
+            username: document.querySelector("#username").value,
+            image: document.querySelector("#image").value,
+
+            email: document.querySelector("#email").value,
+            password: document.querySelector("#password").value,
+
+          });
+        } SignupHandler();
+      }
     });
+    // formSignup.addEventListener("submit", (e) => {
+    //   e.preventDefault();
+    //call api
+
+    // window.location.href = "/#/signin";
+    // thông báo bạn đăng nhập thành công....
+    // });
   },
 };
 export default SignUp;

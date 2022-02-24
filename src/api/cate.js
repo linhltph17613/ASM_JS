@@ -1,5 +1,5 @@
 import instance from "./instance";
-export const getAll = () => {
+export const getAllCate = () => {
     const url = "/cates";
     return instance.get(url);
 };
@@ -16,5 +16,10 @@ export const get = (id) => {
 export const add = (cate) => {
     const url = `/cates`;
     return instance.post(url, cate);
+
+};
+export const update = (cate) => {
+    const url = `/cates/${cate.id}`;
+    return instance.put(url, cate);
 
 };

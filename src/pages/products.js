@@ -1,9 +1,15 @@
+import { getAll } from "../api/products";
+import { getAllCate } from "../api/cate";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import ProductList from "../components/productList";
 const ShopPage = {
   async render() {
+    const { data } = await getAll();
+    const listCate = await getAllCate();
+    const dataCate = listCate.data;
     return /*html*/ `
+    
       ${Header.render()}
         <div class="">
       <img class="w-full" src="https://i.imgur.com/06kGrh2.jpg" alt="" srcset="">
@@ -43,7 +49,7 @@ const ShopPage = {
             <h3 class="font-medium text-3xl hover:text-[#88B44E]">Search</h3>
           </div>
           <form action="">
-            <input class="border rounded-full w-[250px] px-2 py-2" type="text" placeholder="Search.."> <i
+            <input class="border rounded-full w-[250px] px-2 py-2" type="text" id="search-product" placeholder="Search.."> <i
               class="bi bi-search-heart"></i>
           </form>
         </div>
@@ -90,18 +96,91 @@ const ShopPage = {
           &ensp;<span class="text-[#88B44E]">#</span>tea
         </div>
       </div>
-      <div class="w-3/4 grid grid-cols-2 mt-10 gap-[30px]">
+      <div class="w-3/4 grid grid-cols-2 mt-10 gap-[30px]" id="product-item">
 
-        ${await ProductList.render()}
-
+        ${data.map((post) => /*html*/`
+        <div class="overlay  ">
+              <div class="relative  hover:border product-item p-8 text-center">
+                <div class="info-item ">
+                  <img src="${post.img}" class="w-full h-full"
+                    alt="">
+                  <h2 class="text-2xl font-medium">${post.title}</h2>
+                  <p class="py-3 truncate  w-[290px]">${post.desc}</p>
+                  <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price} $</p>
+                </div>
+            
+    
+        <div class=" absolute top-[40%] left-[95px] ">
+          <a class="invisible text-over " href="/products/${post.id}"><button
+              class="buttun px-[40px] py-[10px] bg-gray-300 rounded-full font-medium cursor-pointer" >More info <i
+              class="bi bi-chevron-right text-white  text-[6px] p-1 bg-[#88B44E] boder ml-1 rounded-full"></i></button></a><br>
+          <a class="invisible text-over" href=""><button
+              class="buttun mt-5 px-[40px] py-[10px] bg-[#88B44E] text-white rounded-full font-medium"
+              type="submit">Add cart <i class="bi bi-basket3-fill text-black ml-1"></i></button></a>
+        </div>
+        <div class=" absolute bg-[#88B44E] py-1 w-[380px] left-0 bottom-0 invisible text-over"></div>
+      </div>
+    </div>
+    `
+    ).join("")}
       </div>
       
   </div>
   
       ${Footer.render()}
         `;
-  }, afterRender() {
+  },
+  async afterRender() {
     Header.afterRender();
+    const searchPproduct = document.querySelector("#search-product");
+    const productItem = document.querySelector("#product-item");
+
+    const data = await getAll();
+
+    searchPproduct.addEventListener("keyup", (e) => {
+      e.preventDefault();
+      // console.log(data);
+      let result = data.data.filter(item => {
+        return item.title.includes(searchPproduct.value);
+
+      });
+      // console.log(result);
+      let productAll = "";
+
+      if (result.length == 0) {
+        productAll = "<h3>Không tìm thấy kết quả!</h3>";
+
+      } else {
+        productAll = result.map(post => {
+          return /*html*/ `
+          <div class="overlay  ">
+                <div class="relative  hover:border product-item p-8 text-center">
+                  <div class="info-item ">
+                    <img src="${post.img}" class="w-full h-full"
+                      alt="">
+                    <h2 class="text-2xl font-medium">${post.title}</h2>
+                    <p class="py-3 truncate  w-[290px]">${post.desc}</p>
+                    <p class="font-medium text-[#88B44E] text-xl font-bold">${post.price} $</p>
+                  </div>
+                <div class=" absolute top-[40%] left-[95px] ">
+                  <a class="invisible text-over " href="/products/${post.id}"><button
+                      class="buttun px-[40px] py-[10px] bg-gray-300 rounded-full font-medium cursor-pointer" >More info <i
+                      class="bi bi-chevron-right text-white  text-[6px] p-1 bg-[#88B44E] boder ml-1 rounded-full"></i></button></a><br>
+                  <a class="invisible text-over" href=""><button
+                      class="buttun mt-5 px-[40px] py-[10px] bg-[#88B44E] text-white rounded-full font-medium"
+                      type="submit">Add cart <i class="bi bi-basket3-fill text-black ml-1"></i></button></a>
+                </div>
+                <div class=" absolute bg-[#88B44E] py-1 w-[380px] left-0 bottom-0 invisible text-over"></div>
+              </div>
+            </div>
+          `;
+        }
+        ).join("");
+      }
+
+
+      productItem.innerHTML = productAll;
+    });
   }
 };
 export default ShopPage;

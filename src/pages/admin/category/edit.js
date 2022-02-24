@@ -1,8 +1,9 @@
-import { getAll } from "../../../api/cate";
-import { update } from "../../../api/products";
+import { get } from "../../../api/cate";
+import { update } from "../../../api/cate";
 const AdminEditcate = {
     async render(id) {
-        const { data } = await getAll();
+        const { data } = await get(id);
+        console.log(data);
         return /*html*/ `
         <div class="bg-gray-100 px-10  py-[30px] max-w-3xl mx-auto">
             <div>
@@ -21,7 +22,8 @@ const AdminEditcate = {
             e.preventDefault();
 
             update({
-                name: document.querySelector("title-cate").value
+                id,
+                name: document.querySelector("#title-cate").value,
             })
                 .then((result) => document.location.href = "/admin/category")
                 .catch((error) => console.log(error));

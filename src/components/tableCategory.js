@@ -1,9 +1,9 @@
 import CategoryPage from "../pages/admin/category";
-import { getAll, remove } from "../api/cate";
+import { getAllCate, remove } from "../api/cate";
 import { reRender } from "../utils/rerender";
 const tableCate = {
     async render() {
-        const { data } = await getAll();
+        const { data } = await getAllCate();
         return /*html*/ `
         ${data.map((postNew) => `
             <tr>

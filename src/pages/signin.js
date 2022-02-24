@@ -2,7 +2,8 @@ import { signin } from "../api/user";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import Header from "../components/header";
-
+import $ from "jquery";
+import validate from "jquery-validation";
 const Signin = {
     render() {
         return /*html*/ `
@@ -68,39 +69,76 @@ const Signin = {
     `;
     },
     afterRender() {
-        const formSignin = document.querySelector("#formSignin");
-        formSignin.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            //call api
-            try {
-                const { data } = await signin({
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
 
-                });
-                if (data) {
-                    localStorage.setItem("user", JSON.stringify(data.user));
-                    toastr.success("Đăng nhập thành công");
-                    // console.log(typeof data.user.id);
-                    // document.location.href = "/admin/dashboard";
+        const formSignin = $("#formSignin");
 
-                    setTimeout(() => {
+        formSignin.validate({
+            errorClass: "text-red-500",
 
-                        if (data.user.id === 10) {
+            rules: {
+                email: {
+                    required: true,
 
-                            document.location.href = "/";
-                            // toastr.success("xin chaof admin !");
-                        } else {
-                            document.location.href = "/";
-                        }
+                },
+                password: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 10
 
-                    }, 2000);
                 }
-            } catch (error) {
-                toastr.error(error.response.data);
-            }
 
+            },
+            messages: {
+                email: {
+                    required: "Không được để trống!"
+                },
+                password: {
+                    required: "Không được để trống!",
+                    minlength: "Ít nhất phải 4 ký tự",
+                    maxlength: "Không được vượt quá 10 ký tự"
+                }
+
+            },
+            submitHandler: () => {
+                async function addPostHandler() {
+                    try {
+                        const { data } = await signin({
+                            email: document.querySelector("#email").value,
+                            password: document.querySelector("#password").value,
+
+                        });
+                        if (data) {
+                            localStorage.setItem("user", JSON.stringify(data.user));
+                            toastr.success("Đăng nhập thành công");
+                            // console.log(typeof data.user.id);
+                            // document.location.href = "/admin/dashboard";
+
+                            setTimeout(() => {
+
+                                if (data.user.id === 10) {
+
+                                    document.location.href = "/";
+                                    // toastr.success("xin chaof admin !");
+                                } else {
+                                    document.location.href = "/";
+                                }
+
+                            }, 2000);
+                        }
+                    } catch (error) {
+                        toastr.error(error.response.data);
+                    }
+                } addPostHandler();
+            }
         });
+        // formSignin.addEventListener("submit", async (e) => {
+        //     e.preventDefault();
+        //call api
+
+
+        // });
+
+
     },
 };
 export default Signin;

@@ -1,11 +1,11 @@
 import { update } from "../../../api/products";
 import { get } from "../../../api/products";
 import axios from "axios";
-import { getAll } from "../../../api/cate";
+import { getAllCate } from "../../../api/cate";
 const AdminEditProducts = {
     async render(id) {
         const { data } = await get(id);
-        const getdataCate = await getAll();
+        const getdataCate = await getAllCate();
         const dataCate = getdataCate.data;
 
         return /*html*/ `
